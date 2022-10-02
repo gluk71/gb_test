@@ -18,6 +18,17 @@ string[] createArray()
     return myArr;
 }
 
+void printArray(string[] array)
+{
+    if (array.Length == 0)
+    {
+      Console.Write("All string is too large!!!!");            //если все подстроки длиннее 3х симолов то ругемся  
+    }
+    for (int i = 0; i < array.Length; i++) 
+        Console.Write(array[i] + " ");
+        Console.WriteLine();
+}
+
 if (args.Length == 0)                                       //проверяем командную строку и если она пуста
 {                
     string[] newArray = createArray();                        //вызываем метод который принимает ручной ввод и делает массив 
