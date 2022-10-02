@@ -35,6 +35,6 @@ if (args.Length == 0)
 }
 else
 {
-    string[] newArray = createArray(args);                        //вызываем метод который принимает ручной ввод и делает массив 
+    string[] newArray = createArray(args);                        
     printArray(newArray);
 }
