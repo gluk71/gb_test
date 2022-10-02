@@ -1,9 +1,5 @@
 string[] createArray()
 {
-    Console.WriteLine("Enter string to parse:");     //получаем
-    string str = Console.ReadLine();
-    string[] subs = str.Split(' ');    //разделитель пробел 
-    //Далее беьм строку на части и проверяем на нужное и в массив который и возвращаем
     string[] myArr = new string[0];           //задаем массив, пока пустой так как конечный размер его мы не знаем
     int c = 0;
     for (int i = 0; i < subs.Length; i++)              //бежим по исходному массиву 
@@ -29,5 +25,16 @@ void printArray(string[] array)
         Console.WriteLine();
 }
 
-    string[] newArray = createArray();                        //вызываем метод который принимает ручной ввод и делает массив 
-    printArray(newArray);                                     //печатаем вывод
+if (args.Length == 0)
+{
+   Console.WriteLine("Enter string to parse:");     //получаем
+   string str = Console.ReadLine();
+   string[] subs = str.Split(' ');    //разделитель пробел 
+   string[] newArray = createArray(subs);                        //вызываем метод который принимает ручной ввод и делает массив 
+   printArray(newArray);
+}
+else
+{
+    string[] newArray = createArray(args);                        //вызываем метод который принимает ручной ввод и делает массив 
+    printArray(newArray);
+}
